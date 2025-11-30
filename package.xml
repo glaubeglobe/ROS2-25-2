@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+  ROS 패키지 매니페스트 파일
+  
+  [목적]
+  - 패키지 메타데이터 정의
+  - 의존성 선언
+  - 빌드 및 실행 요구사항 명시
+-->
+<package format="2">
+  
+  <!-- ========================================
+       기본 정보
+       ======================================== -->
+  
+  <!-- 패키지 이름 (CMakeLists.txt의 project()와 동일) -->
+  <name>hybrid_controller</name>
+  
+  <!-- 버전 (Semantic Versioning: Major.Minor.Patch) -->
+  <version>1.0.0</version>
+  
+  <!-- 패키지 설명 -->
+  <description>
+    Hybrid controller for autonomous racing with MPC steering and PID speed control.
+    Designed for F1Tenth gym simulator and ForzaETH race stack integration.
+    
+    Features:
+    - MPC-based steering control with Kinematic Bicycle Model
+    - PID-based speed control
+    - Curvature-based speed profiling
+    - Speed-based steering limitation
+    - ROS C++ implementation
+  </description>
+
+  <!-- ========================================
+       관리자 및 저자 정보
+       ======================================== -->
+  
+  <!-- 패키지 관리자 (문의처) -->
+  <maintainer email="your_email@example.com">Your Name</maintainer>
+  
+  <!-- 라이센스 -->
+  <license>MIT</license>
+  
+  <!-- 저자 -->
+  <author email="your_email@example.com">Your Name</author>
+  
+  <!-- 홈페이지 (선택적) -->
+  <!-- <url type="website">http://wiki.ros.org/hybrid_controller</url> -->
+  
+  <!-- ========================================
+       빌드 도구
+       ======================================== -->
+  
+  <!-- Catkin 빌드 시스템 사용 -->
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- ========================================
+       빌드 의존성 (Build Dependencies)
+       
+       [설명]
+       패키지를 컴파일할 때 필요한 패키지들
+       - 헤더 파일 포함
+       - 라이브러리 링크
+       ======================================== -->
+  
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>ackermann_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+  <build_depend>tf2_ros</build_depend>
+  <build_depend>visualization_msgs</build_depend>
+  <build_depend>eigen</build_depend>
+
+  <!-- ========================================
+       빌드 내보내기 의존성 (Build Export Dependencies)
+       
+       [설명]
+       이 패키지를 사용하는 다른 패키지가
+       빌드할 때 필요한 패키지들
+       ======================================== -->
+  
+  <build_export_depend>roscpp</build_export_depend>
+  <build_export_depend>std_msgs</build_export_depend>
+  <build_export_depend>nav_msgs</build_export_depend>
+  <build_export_depend>geometry_msgs</build_export_depend>
+  <build_export_depend>ackermann_msgs</build_export_depend>
+  <build_export_depend>tf2</build_export_depend>
+  <build_export_depend>tf2_ros</build_export_depend>
+  <build_export_depend>visualization_msgs</build_export_depend>
+
+  <!-- ========================================
+       실행 의존성 (Execution Dependencies)
+       
+       [설명]
+       패키지를 실행할 때 필요한 패키지들
+       - 런타임 라이브러리
+       - 메시지 타입
+       ======================================== -->
+  
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>ackermann_msgs</exec_depend>
+  <exec_depend>tf2</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>visualization_msgs</exec_depend>
+  <exec_depend>eigen</exec_depend>
+  
+  <!-- ========================================
+       테스트 의존성 (선택적)
+       ======================================== -->
+  
+  <!-- <test_depend>rostest</test_depend> -->
+  <!-- <test_depend>gtest</test_depend> -->
+
+</package>
