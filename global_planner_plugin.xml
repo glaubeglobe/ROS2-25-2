@@ -1,0 +1,9 @@
+<library path="f1tenth_raceline_planner">
+  <class
+    type="f1tenth_raceline_planner::RacelinePlanner"
+    base_class_type="nav2_core::GlobalPlanner">
+    <description>
+      Raceline-based global planner for F1TENTH using a precomputed CSV path.
+    </description>
+  </class>
+</library>
